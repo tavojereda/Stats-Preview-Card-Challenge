@@ -1,213 +1,169 @@
-@media only screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
-	/*********************************TAG SECTION********************************/
-	body {
-		background-color: #090b1a;
-		font-family: "Inter", sans-serif;
-		font-size: 15px;
-		color: #ffffff;
-		width: 1400px;
-	}
-
-	h1 {
-		width: 350px;
-		margin: 14% 0 0 12%;
-	}
-
-	p {
-		color: #ffffff99;
-		font-size: 12.5px;
-		margin: 0;
-	}
-
-	span {
-		color: #aa5cdb;
-	}
-
-	img {
-		height: 100%;
-		margin-left: 50.5%;
-	}
-
-	th {
-		font-size: 23px;
-		width: 110px;
-	}
-
-	/*********************************CLASS SECTION********************************/
-	.container {
-		background-color: #1b1938;
-		border-radius: 10px;
-		height: 400px;
-		width: 978px;
-	}
-
-	.txt-container {
-		top: 0%;
-		height: 100%;
-		width: 50.5%;
-	}
-
-	.purple-box {
-		/* background-color: #aa5cdb; */
-		background-color: #62009f;
-		height: 100%;
-		width: 49.5%;
-		margin-left: 50.5%;
-		opacity: 0.33;
-	}
-
-	.stats {
-		width: 350px;
-	}
-
-	.main-para {
-		line-height: 1.75;
-		width: 290px;
-		margin: 5% 0 0 12%;
-	}
-
-	.table-desktop {
-		text-align: left;
-		margin: 11% 0 11% 12%;
-	}
-
-	.table-mobile {
-		display: none;
-	}
-
-	.table-para {
-		font-family: "Lexend Deca", sans-serif;
-	}
-
-	/****Codigo para centrar objetos*****/
-	.centered {
-		/* position: fixed; */
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		/* bring your own prefixes */
-		transform: translate(-50%, -50%);
-	}
-
-	/*********************************CSS Grouping Selector********************************/
-	img,
-	.txt-container {
-		position: absolute;
-	}
-
-	.purple-box,
-	img {
-		border-top-right-radius: inherit;
-		border-bottom-right-radius: inherit;
-	}
+/*********************************TAG SECTION********************************/
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 1199px) {
-	/*********************************TAG SECTION********************************/
+body {
+	background-color: #090b1a;
+	font-family: "Inter", sans-serif;
+	font-size: 15px;
+	color: #ffffff;
+}
+
+h1 {
+	margin: 14% 0 0 12%;
+	padding-right: 10%;
+	font-weight: 700;
+}
+
+p {
+	line-height: 1.75;
+	color: #ffffff99;
+	font-size: 12.5px;
+}
+
+img {
+	order: 2;
+}
+
+span {
+	color: #aa5cdb;
+}
+
+/*********************************CLASS SECTION********************************/
+.container {
+	background-color: #1b1938;
+	border-radius: 10px;
+	height: 400px;
+	width: 978px;
+	/* height: 55.5%;
+	width: 63.7%; */
+}
+
+.main-para {
+	margin: 5% 0 0 12%;
+	padding-right: 25%;
+}
+
+.txt-container {
+	flex-direction: column;
+	order: 1;
+}
+
+.purple-box {
+	/* background-color: #aa5cdb; */
+	background-color: #62009f;
+	width: 50%;
+	margin-left: 50%;
+	opacity: 0.33;
+	position: absolute;
+}
+
+.stats-contianer {
+	margin: 11% 0 11% 12%;
+
+}
+
+.stats-heading {
+	margin-right: 10%;
+}
+
+/*********************************CSS Decendant Selector********************************/
+.stats-contianer p {
+	font-family: "Lexend Deca", sans-serif;
+	margin-top: 10%;
+}
+
+/****Codigo para centrar objetos*****/
+.centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/*********************************CSS Grouping Selector********************************/
+.purple-box, img {
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+body, .container, .txt-container, .stats-contianer {
+	display: flex;
+}
+
+img, .txt-container{
+	flex: 1;
+}
+
+img, .purple-box{
+	height: 100%;
+}
+
+
+/* @media (max-width: 380px) { */
+@media (max-width: 500px) {
 	body {
-		background-color: #090b1a;
-		font-family: "Inter", sans-serif;
-		font-size: 15px;
-		color: #ffffff;
-		width: 375px;
+		text-align: center;
+		height: 1000px;
 	}
 
 	h1 {
-		width: 280px;
-		margin: 11% 0 0 8%;
+		margin: 14% 0 0 0;
+		padding: 0 5%;
+		font-size: 1.72rem;
 	}
-
-	p {
-		color: #ffffff99;
-		font-size: 12.5px;
-		margin: 0;
-	}
-
-	span {
-		color: #aa5cdb;
-	}
-
+	
 	img {
 		width: 100%;
-		margin-bottom: 50.5%;
+		order: 1;
 	}
 
-	th {
-		font-size: 23px;
-		height: 35px;
-	}
-
-	td {
-		height: 40px;
-		vertical-align: top;
-	}
-
-	/*********************************CLASS SECTION********************************/
 	.container {
-		background-color: #1b1938;
-		border-radius: 10px;
-		height: 805px;
-		width: 330px;
+		height: 831px;
+		width: 320px;
+		flex-direction: column;
 	}
 
-	.txt-container {
-		bottom: 0;
-		height: 66%;
-		width: 100%;
-		text-align: center;
-	}
-
-	.purple-box {
-		/* background-color: #aa5cdb; */
-		background-color: #62009f;
-		height: 33.8%;
-		width: 100%;
-		margin-bottom: 50.5%;
-		opacity: 0.33;
-	}
-
-	.stats {
-		width: 350px;
+	.txt-container{
+		flex: 2;
+		order: 2;
 	}
 
 	.main-para {
-		line-height: 1.75;
-		width: 223px;
-		margin: 5% 0 0 18%;
+		margin: 5% 0 0 0;
+		padding: 0 15%;
 	}
 
-	.table-desktop {
-		display: none;
+	.purple-box {
+		height: 33.3%;
+		width: 100%;
+		margin-left: 0;
 	}
 
-	.table-mobile {
-		text-align: center;
-		margin: 11% 0 0 37.5%;
+	.stats-contianer {
+		flex-direction: column;
+		margin: 11% 0 0 0;
+	}
+	
+	.stats-contianer p {
+		margin-top: 1.5%;
+		margin-bottom: 10%;
 	}
 
-	.table-para {
-		font-family: "Lexend Deca", sans-serif;
+	.stats-heading {
+		margin: 0;
 	}
 
-	/****Codigo para centrar objetos*****/
+	.purple-box, img {
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		border-bottom-right-radius: 0;
+	}
+
 	.centered {
-		/* position: fixed; */
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		/* bring your own prefixes */
-		transform: translate(-50%, -50%);
-	}
-
-	/*********************************CSS Grouping Selector********************************/
-	img,
-	.txt-container {
-		position: absolute;
-	}
-
-	.purple-box,
-	img {
-		border-top-right-radius: inherit;
-		border-top-left-radius: inherit;
+		transform: translate(-50%, -35%);
 	}
 }
